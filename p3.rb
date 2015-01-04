@@ -18,8 +18,9 @@ def is_prime(x)
 end
 
 number = 600851475143
+optimized_number = Math.sqrt(number).to_i + 1
 
-i = number - 1
+i = optimized_number / 2
 while i > 0
   if (number % i == 0) && is_prime(i)
     p i
