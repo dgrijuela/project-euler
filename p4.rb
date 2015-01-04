@@ -17,30 +17,16 @@ def is_palindrome(n)
 end
 
 i = 999
-j = 999
-#while i > 100
-#  while j > 100
-#    if is_palindrome(i * j)
-#      p (i * j).to_s + ' (product of ' + i.to_s + ' and ' + j.to_s + ')'
-#      do_break = true
-#    end
-#    break if do_break == true
-#    i -= 1
-#  end
-#  j -= 1
-#  break if do_break == true
-#end
 
 palindromes = []
 while i > 100
   999.times do |j|
     if is_palindrome(i * j)
-      #p (i * j).to_s + ' (product of ' + i.to_s + ' and ' + j.to_s + ')'
-      palindromes << i
+      palindromes << i * j
     end
     j -= 1
   end
   i -= 1
 end
 
-p palindromes.order.first
+p palindromes.sort.last
